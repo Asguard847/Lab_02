@@ -1,6 +1,7 @@
 package com.otto.lab2;
 
 import com.otto.lab2.model.Sentence;
+import com.otto.lab2.model.Text;
 import com.otto.lab2.service.InputReadService;
 import com.otto.lab2.service.OutputDisplayService;
 import com.otto.lab2.service.ParsingService;
@@ -22,9 +23,9 @@ public class Main {
         ParsingService parsingService = new ParsingServiceImpl();
         OutputDisplayService outputDisplayService = new OutputDisplayConsoleService();
 
-        String input = inputReadService.readInput("input.txt");
-        List<Sentence> sentences = parsingService.parseText(input);
-        outputDisplayService.displayOutput(sentences);
+        String input = inputReadService.readInput("src/main/resources/input.txt");
+        Text text = parsingService.parseText(input);
+        outputDisplayService.displayOutput(text);
 
     }
 }

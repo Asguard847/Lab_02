@@ -1,23 +1,44 @@
 package com.otto.lab2.model;
 
+import java.util.List;
+
 public class Sentence {
 
-    private String content;
-    private int wordCounter;
+    private List<Word> words;
 
-    public String getContent() {
-        return content;
+    private int wordCount;
+
+    public Sentence() {
     }
 
-    public void setContent(String content) {
-        this.content = content;
+    public Sentence(List<Word> words, int wordCount) {
+        this.words = words;
+        this.wordCount = wordCount;
     }
 
-    public int getWordCounter() {
-        return wordCounter;
+    public List<Word> getWords() {
+        return words;
     }
 
-    public void setWordCounter(int wordCounter) {
-        this.wordCounter = wordCounter;
+    public void setWords(List<Word> words) {
+        this.words = words;
+    }
+
+    public int getWordCount() {
+        return wordCount;
+    }
+
+    public void setWordCount(int wordCount) {
+        this.wordCount = wordCount;
+    }
+
+    @Override
+    public String toString() {
+
+        StringBuilder stringBuilder = new StringBuilder();
+        for(Word word: words){
+            stringBuilder.append(word + " ");
+        }
+        return stringBuilder.toString();
     }
 }

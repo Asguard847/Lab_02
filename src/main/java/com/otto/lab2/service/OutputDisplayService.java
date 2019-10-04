@@ -1,6 +1,7 @@
 package com.otto.lab2.service;
 
 import com.otto.lab2.model.Sentence;
+import com.otto.lab2.model.Text;
 
 import java.util.List;
 
@@ -13,10 +14,10 @@ public interface OutputDisplayService {
 
     /**
      * Outputs to console each {@link com.otto.lab2.model.Sentence}
-     * in ascending order by number of words with nuber of words counter.
+     * in ascending order by number of words.
      *
-     * @param input List of {@link com.otto.lab2.model.Sentence}.
+     * @param {@link com.otto.lab2.model.Text}.
      */
 
-    void displayOutput(List<Sentence> input);
+    void displayOutput(Text text);
 }
